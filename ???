@@ -1,0 +1,24 @@
+
+var quotes = [
+  { content: "Death is only the end if you assume the story is about you.",
+    character: ' ' },
+  { content: "Mostly void, partially stars.",
+    character: '' },
+  { content: "If you love something, set it free. If it doesn't return, it probably died of a broken heart because it thought you loved it.",
+    character: ' ' },
+  { content: "Nothing to see here.",
+    character: ' ' }
+];
+
+var displayQuote = function() {
+
+  var index = Math.floor((Math.random() * quotes.length));
+  var quote = quotes[index];
+  var blockquoteElement = document.getElementById('quote-body');
+  var attributionElement = document.getElementById('quote-attribution');
+
+  blockquoteElement.innerHTML = quote.content;
+  attributionElement.innerHTML = quote.character;
+}
+
+document.addEventListener("DOMContentLoaded", displayQuote);
